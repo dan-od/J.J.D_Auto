@@ -1,0 +1,25 @@
+<main class="container">
+    <div class="row">
+        <div class="offset-md-1 col-md-10">
+            <h1><%= title %></h1>
+            <table class="table table-bordered table-striped table-hover">
+                <tr class="d-flex">
+                    <th class="text-center col-2">Name</th>
+                    <th class="text-center col-2">Category</th>
+                    <th class="text-center col-2">Manufacturer</th>
+                    <th class="col-5">Description</th>
+                    <th class="text-center col-1">Price</th>
+                </tr>
+                <% partsList.forEach(part => { %>
+                <tr class="d-flex">
+                    <td class="text-center col-2"><%= part.name %></td>
+                    <td class="text-center col-2"><%= part.category %></td>
+                    <td class="text-center col-2"><%= part.manufacturer %></td>
+                    <td class="col-5"><%= part.description %></td>
+                    <td class="text-center col-1">$<%= part.price %></td>
+                </tr>
+                <% }) %>
+            </table>
+        </div>
+    </div>
+</main>
